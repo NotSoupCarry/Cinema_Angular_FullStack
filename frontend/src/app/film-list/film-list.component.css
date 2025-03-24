@@ -1,0 +1,105 @@
+.film-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.film-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.deletebtn {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modifybtn {
+  background-color: #4c6dff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.deletebtn:hover {
+  background-color: #ff0000;
+}
+
+.modifybtn:hover {
+  background-color: #3e58ce;
+}
+
+.film-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.film-container form input,
+.film-container form select,
+.film-container form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.film-container form button {
+  align-self: center;
+  padding: 10px 20px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.film-container form button:hover {
+  background-color: #218838;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-right: 10px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
