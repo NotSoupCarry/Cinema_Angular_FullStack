@@ -19,12 +19,12 @@ export class FilmListComponent implements OnInit {
 
   // Dichiarazione di una variabile per il nuovo film
   newFilm: Film = {
-    titolo: '',
-    regista: '',
-    annoUscita: 0,
-    genere: Genere.Azione,
-    descrizione: '',
-    valutazione: 0
+    titolo: null,
+    regista: null,
+    annoUscita: null,
+    genere: null,
+    descrizione: null,
+    valutazione: null
   };
 
   constructor(private filmService: FilmService) { }
@@ -61,12 +61,12 @@ export class FilmListComponent implements OnInit {
 
       // Reset del form per aggiungere un nuovo film
       this.newFilm = {
-        titolo: '',
-        regista: '',
-        annoUscita: 0,
-        genere: Genere.Azione,
-        descrizione: '',
-        valutazione: 0
+        titolo: null,
+        regista: null,
+        annoUscita: null,
+        genere: null,
+        descrizione: null,
+        valutazione: null
       };
     }, (error) => {
       // Gestione degli errori (se c'è un errore durante l'aggiunta)

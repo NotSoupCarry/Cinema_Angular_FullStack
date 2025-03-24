@@ -7,8 +7,10 @@
       <input type="text" name="regista" [(ngModel)]="newFilm.regista" placeholder="Regista" required>
       <input type="number" name="annoUscita" [(ngModel)]="newFilm.annoUscita" placeholder="Anno di uscita" required>
       <select name="genere" [(ngModel)]="newFilm.genere" required>
+        <option value="" disabled selected>Seleziona un genere</option>  <!-- Placeholder -->
         <option *ngFor="let genere of genereOptions" [value]="genere">{{ genere }}</option>
-      </select>
+      </select>      
+      
       <textarea name="descrizione" [(ngModel)]="newFilm.descrizione" placeholder="Descrizione" required class="no-resize" rows="4"></textarea>
       <input type="number" name="valutazione" [(ngModel)]="newFilm.valutazione" placeholder="Valutazione">
       <button type="submit">Aggiungi Film</button>
