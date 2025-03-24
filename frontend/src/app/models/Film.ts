@@ -2,12 +2,12 @@ import { Genere } from "./enums/Genere";
 
 export class Film {
     id?: number;
-    titolo: string;
-    regista: string;
-    annoUscita: number;
-    genere: Genere;
-    descrizione: string;
-    valutazione?: number;  // `valutazione` è opzionale
+    titolo: string | null;
+    regista: string | null;
+    annoUscita: number | null;
+    genere: Genere | null;
+    descrizione: string | null;
+    valutazione?: number | null; 
   
     constructor(
       id: number,

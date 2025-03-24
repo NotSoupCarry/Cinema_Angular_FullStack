@@ -13,7 +13,7 @@ import { FilmService } from '../services/film.service';
 })
 export class FilmListComponent implements OnInit {
   films: Film[] = [];
-  genereOptions = Object.values(Genere);  
+  genereOptions = Object.values(Genere);
   selectedFilm: Film | null = null;
   searchTerm: string = '';
 
@@ -53,10 +53,14 @@ export class FilmListComponent implements OnInit {
   // Funzione per aggiungere un nuovo film
   addFilm(): void {
     this.filmService.addFilm(this.newFilm).subscribe(() => {
+      // Mostra un alert di successo
+      alert('Film aggiunto con successo!');
 
+      // Ricarica la lista dei film
       this.loadFilms();
 
-      this.newFilm = {  // Reset the newFilm form
+      // Reset del form per aggiungere un nuovo film
+      this.newFilm = {
         titolo: '',
         regista: '',
         annoUscita: 0,
@@ -64,6 +68,9 @@ export class FilmListComponent implements OnInit {
         descrizione: '',
         valutazione: 0
       };
+    }, (error) => {
+      // Gestione degli errori (se c'è un errore durante l'aggiunta)
+      alert('Si è verificato un errore durante l\'aggiunta del film. Il titolo del film è già presente');
     });
   }
 
